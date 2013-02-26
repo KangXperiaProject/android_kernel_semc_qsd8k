@@ -722,7 +722,7 @@ int calc_fb_offset(struct msm_fb_data_type *mfd, struct fb_info *fbi, int bpp)
 	struct msm_panel_info *panel_info = &mfd->panel_info;
 	int remainder, yres, offset;
 
-    if (!align_buffer)
+if (!align_buffer)
     {
         return fbi->var.xoffset * bpp + fbi->var.yoffset * fbi->fix.line_length;
     }
@@ -1412,7 +1412,7 @@ static int msm_fb_release(struct fb_info *info, int user)
 
 	if (!mfd->ref_cnt) {
 		if ((ret =
-		     msm_fb_blank_sub(FB_BLANK_POWERDOWN, info,
+		     msm_fb_blank_sub(FB_BLANK_UNBLANK, info, 
 				      mfd->op_enable)) != 0) {
 			printk(KERN_ERR "msm_fb_release: can't turn off display!\n");
 			return ret;

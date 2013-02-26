@@ -54,12 +54,12 @@ enum {		/* display */
 };
 
 enum {
-	LCDC_RGB_INTF,			/* 0 */
-	DTV_INTF = LCDC_RGB_INTF,	/* 0 */
-	MDDI_LCDC_INTF,			/* 1 */
-	MDDI_INTF,			/* 2 */
-	EBI2_INTF,			/* 3 */
-	TV_INTF = EBI2_INTF,		/* 3 */
+	LCDC_RGB_INTF,      /* 0 */
+	DTV_INTF = LCDC_RGB_INTF,  /* 0 */
+	MDDI_LCDC_INTF,      /* 1 */
+	MDDI_INTF,      /* 2 */
+	EBI2_INTF,      /* 3 */
+	TV_INTF = EBI2_INTF,    /* 3 */
 	DSI_VIDEO_INTF,
 	DSI_CMD_INTF
 };
@@ -104,7 +104,7 @@ enum {
 #define INTR_PRIMARY_INTF_UDERRUN	BIT(8)
 #define INTR_EXTERNAL_VSYNC		BIT(9)
 #define INTR_EXTERNAL_INTF_UDERRUN	BIT(10)
-#define INTR_PRIMARY_READ_PTR		BIT(11)
+#define INTR_PRIMARY_READ_PTR           BIT(11)
 #define INTR_DMA_P_HISTOGRAM		BIT(17)
 
 /* histogram interrupts */
@@ -127,9 +127,8 @@ enum {
 	OVERLAY_PIPE_VG2,
 	OVERLAY_PIPE_MAX
 };
-
 /* 2 VG pipes can be shared by RGB and VIDEO */
-#define MDP4_MAX_PIPE 	(OVERLAY_PIPE_MAX + 2)
+#define MDP4_MAX_PIPE   (OVERLAY_PIPE_MAX + 2)
 
 enum {
 	OVERLAY_TYPE_RGB,
@@ -196,7 +195,7 @@ enum {
 #define MDP4_FORMAT_ALPHA_ENABLE	BIT(8)
 
 #define MDP4_OP_DEINT_ODD_REF  	BIT(19)
-#define MDP4_OP_DEINT_EN	BIT(18)
+#define MDP4_OP_DEINT_EN  BIT(18)
 #define MDP4_OP_IGC_LUT_EN	BIT(16)
 #define MDP4_OP_DITHER_EN     	BIT(15)
 #define MDP4_OP_FLIP_UD		BIT(14)
